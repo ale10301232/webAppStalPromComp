@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@ui5/cli": "^2.14.11"
+  },
+  "name": "webappstalpromcomp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ale10301232/webAppStalPromComp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ale10301232/webAppStalPromComp/issues"
+  },
+  "homepage": "https://github.com/ale10301232/webAppStalPromComp#readme",
+  "description": ""
+}
