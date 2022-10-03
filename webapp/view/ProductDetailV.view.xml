@@ -1,0 +1,13 @@
+<mvc:View controllerName="webapp.controller.ProductsDetail" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+    <App id="app">
+        <Page title="Райское наслаждение" showNavButton="true" navButtonPress=".onNavBack">
+            <ObjectHeader icon="sap-icon://background" iconAlt="{products>Name}" title="{products>Name}" backgroundDesign="Transparent">
+                <ObjectAttribute text="Компания: {products>Manufacturer} " />
+                <ObjectAttribute text="Цена: {products>Price} руб." />
+                <ObjectAttribute text="Калорийность: {products>Calories} кал." />
+                <ObjectAttribute title="Описание" />
+                <ObjectAttribute text="{products>Description}" />
+            </ObjectHeader>
+        </Page>
+    </App>
+</mvc:View>

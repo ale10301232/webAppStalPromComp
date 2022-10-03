@@ -1,0 +1,25 @@
+{
+	"ProductCollection": {
+		"Product1": {
+			"Name": "Марс",
+			"Manufacturer": "Компания1",
+			"Price": 100.00,
+			"Calories": 500,
+			"Description": "Описание1"
+		},
+		"Product2": {
+			"Name": "Сникерс",
+			"Manufacturer": "Компания2",
+			"Price": 110.00,
+			"Calories": 600,
+			"Description": "Описание2"
+		},
+		"Product3": {
+			"Name": "Баунти",
+			"Manufacturer": "Компания3",
+			"Price": 121.00,
+			"Calories": 700,
+			"Description": "Описание3"
+		}
+	}
+}

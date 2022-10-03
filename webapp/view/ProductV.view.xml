@@ -1,0 +1,50 @@
+<mvc:View controllerName="webapp.controller.Products" displayBlock="true" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <App id="app">
+        <Page title="Райское наслаждение">
+            <ObjectHeader title="Показатели" icon="sap-icon://nutrition-activity">
+                <statuses>
+                    <ObjectStatus text="шт." state="Success" />
+                </statuses>
+                <attributes>
+                    <ObjectAttribute text="Сумма: ${products>/Price} >100" />
+                    <ObjectAttribute text="Среднее: {path:'products>/ProductCollection/Product1/Price'}" />
+                    <ObjectAttribute title="Visit our site" text="{products>/ProductCollection/Product1/Price}" active="true" />
+                </attributes>
+            </ObjectHeader>
+            <Table id="idProductsTable" items="{
+                        path: 'products>/ProductCollection',
+                        sorter: {
+                            path: 'Price'
+                        }
+                    }" width="auto" class="sapUiMediumMargin">
+                <columns>
+                    <Column width="12em">
+                        <Text text="Шоколадки" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Производитель" />
+                    </Column>
+                    <Column width="12em">
+                        <Text text="Цена" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem press=".onItemSelected" type="Navigation">
+                        <cells>
+                            <ObjectIdentifier title="{products>Name}" />
+                            <Text text="{products>Manufacturer}" />
+                            <ObjectNumber
+                                number="{
+                                parts:[{path:'products>Price'},{path:'products>CurrencyCode'}],
+                                type: 'sap.ui.model.type.Currency',
+                                formatOptions: {showMeasure: false}
+                            }"
+                                unit="руб."
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </Page>
+    </App>
+</mvc:View>

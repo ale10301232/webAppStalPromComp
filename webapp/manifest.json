@@ -1,0 +1,95 @@
+{
+    "_version": "1.1.0",
+	
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "webapp",
+        "type": "application",
+        "applicationVersion": {
+            "version": "1.1.1"
+        },
+        "title": "SAPUI5 Test",
+        "dataSources": {
+          "oData_alias": {
+            "uri": "model/products.json",
+            "type": "JSON"
+          }
+        }
+
+    },
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+    "sap.ui5": {
+        "rootView": {
+			"viewName": "webapp.view.ProductV",
+			"type": "XML",
+			"async": true
+		},
+
+		"dependencies": {
+			"minUI5Version": "1.60",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+    "models": {
+      "products": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "oData_alias"
+			}
+		},
+        "resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "webapp.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+              },
+              "routes": [
+                {
+                  "pattern": "",
+                  "name": "home",
+                  "target": "home"
+                },
+                {
+                  "pattern": "detail/ProductCollection/{productPath}",
+                  "name": "detail",
+                  "target": "detail"
+                }
+              ],
+              "targets": {
+                "home": {
+                  "viewId": "home",
+                  "type": "View",
+                  "viewName": "ProductV"
+                },
+                "detail": {
+                  "viewId": "detail",
+                  "type": "View",
+                  "viewName": "ProductDetailV"
+                }
+              }
+        },
+        
+        "contentDensities": {
+            "compact": false,
+            "cozy": false
+        }
+    }
+
+}
