@@ -2,7 +2,7 @@
     <App id="app">
         <Page title="Райское наслаждение" showNavButton="true" navButtonPress=".onNavBack">
             <ObjectHeader icon="sap-icon://background" iconAlt="{products>Name}" title="{products>Name}" backgroundDesign="Transparent">
-                <ObjectAttribute text="Компания: {products>Manufacturer} " />
+                <ObjectAttribute text="{products>Manufacturer} " />
                 <ObjectAttribute text="Цена: {products>Price} руб." />
                 <ObjectAttribute text="Калорийность: {products>Calories} кал." />
                 <ObjectAttribute title="Описание" />

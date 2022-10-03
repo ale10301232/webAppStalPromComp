@@ -3,12 +3,11 @@
         <Page title="Райское наслаждение">
             <ObjectHeader title="Показатели" icon="sap-icon://nutrition-activity">
                 <statuses>
-                    <ObjectStatus text="шт." state="Success" />
+                    <ObjectStatus text="{path:'products>/ProductCollection/', formatter: '.formatter.getCount'} шт." state="Success" />
                 </statuses>
                 <attributes>
-                    <ObjectAttribute text="Сумма: ${products>/Price} >100" />
-                    <ObjectAttribute text="Среднее: {path:'products>/ProductCollection/Product1/Price'}" />
-                    <ObjectAttribute title="Visit our site" text="{products>/ProductCollection/Product1/Price}" active="true" />
+                    <ObjectAttribute text="Сумма: {path:'products>/ProductCollection/', formatter: '.formatter.getSum'} руб." />
+                    <ObjectAttribute text="Среднее: {path:'products>/ProductCollection/', formatter: '.formatter.getMiddleSum'} руб." />
                 </attributes>
             </ObjectHeader>
             <Table id="idProductsTable" items="{
