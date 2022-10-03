@@ -1,6 +1,12 @@
+/*Для вычисления сумм по заданию
+* getSum() -- Сумма всех цен в коллекции ProductCollection в model/products.json
+* getMiddleSum() -- Среднее от суммы цен -//-
+* getCount() -- Число найденых элементов(продуктов)
+* aValues - входные данные, там "коллекция".
+* k - без неё не считается(NaN), разобраться
+*/
 sap.ui.define([], function () {
     "use strict";
-
     return {
         getSum: function (aValues) {
             var iSum = 0;

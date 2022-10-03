@@ -1,8 +1,11 @@
+/*Контроллер для детализации view 
+* _onObjectMatched() -- поиск совпадений и запись в модель products
+* onNavBack() -- для перехода на домашнюю страницу
+*/
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
-	"sap/ui/model/json/JSONModel",
 	"sap/ui/core/UIComponent"
-], function (Controller, JSONModel, UIComponent) {
+], function (Controller, UIComponent) {
 	"use strict";
 
 	return Controller.extend("webapp.controller.ProductsDetail", {
